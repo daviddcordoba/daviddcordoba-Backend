@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Libro 1",
+        "price": 5500,
+        "thumbnail": "https://.webp",
+        "id": 1
+    },
+    {
+        "title": "Libro 2",
+        "price": 3450.5,
+        "thumbnail": "https://.webp",
+        "id": 2
+    },
+    {
+        "title": "Libro 3",
+        "price": 4252,
+        "thumbnail": "https://.webp",
+        "id": 3
+    }
+]

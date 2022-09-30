@@ -1,8 +1,9 @@
-const { Router } = require ('express')
+const { Router } = require ('express');
+const Contenedor = require('../CordobaDavid');
 const routerProduct = Router();
-const Contenedor = require('./CordobaDavid')
 
-const productContainer = new Contenedor()
+
+const productContainer = new Contenedor('productos.txt')
 
 routerProduct.get('/', (req, res) => {
     res.json(productContainer.getAll())

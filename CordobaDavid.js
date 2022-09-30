@@ -67,3 +67,13 @@ class Contenedor{
 
 }
 module.exports = Contenedor
+
+
+const agregando = new Contenedor('productos.txt')
+agregando.save(
+    {
+        nombre:'david',
+        precio: '150'
+
+    }
+)

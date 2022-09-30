@@ -37,6 +37,16 @@ class Contenedor{
         let resultId = this.products.find(prod => prod.id == id)
         return resultId
     }
+    
+    modifById(id, producto){
+        try {
+            producto.id = id
+            this.getAll().splice(id-1, 1, producto)
+            return this.getById(id)
+        } catch(error){
+            return error
+        } 
+    }
 
     getAll(){
         return this.products
@@ -57,12 +67,3 @@ class Contenedor{
 
 }
 module.exports = Contenedor
-const contenedor = new Contenedor("productos.txt") 
-
- contenedor.save({"title": "Libro 1", "price": 5500, "thumbnail": "https://.webp"})
-contenedor.save({"title": "Libro 2", "price": 3450.50, "thumbnail": "https://.webp"})
-contenedor.save({"title": "Libro 3", "price": 4252, "thumbnail": "https://.webp"}) 
-
-/* console.log(contenedor.getById(3)) */
-//console.log(contenedor.getAll())
-// contenedor.deleteAll()

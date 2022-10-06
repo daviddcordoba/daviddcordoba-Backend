@@ -1,33 +1,32 @@
-const { Router } = require ('express');
-const Contenedor = require('../CordobaDavid');
+const { Router } = require ('express')
 const routerProduct = Router();
+const Containter = require('../containers/index')
 
-
-const productContainer = new Contenedor('productos.txt')
+const ProductContain = new Containter()
 
 routerProduct.get('/', (req, res) => {
-    res.json(productContainer.getAll())
+    res.json(ProductContain.getAll())
 })
 
 routerProduct.get('/:id', (req, res) => {
     const num = parseInt(req.params.id)
-    res.json(productContainer.getById(num))
+    res.json(ProductContain.getById(num))
 })
 
 routerProduct.post('/', (req, res) => {
     const product = req.body
-    res.json(productContainer.save(product))
+    res.json(ProductContain.save(product))
 })
 
 routerProduct.put('/:id', (req, res) => {
     const num = parseInt(req.params.id)
     const product = req.body
-    res.json(productContainer.modifById(num, product))
+    res.json(ProductContain.modifById(num, product))
 })
 
 routerProduct.delete('/:id', (req, res) => {
     const num = parseInt(req.params.id)
-    res.json(productContainer.deleteById(num))
+    res.json(ProductContain.deleteById(num))
 })
 
 

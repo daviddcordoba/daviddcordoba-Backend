@@ -1,7 +1,0 @@
-[
-    {
-        "nombre": "david",
-        "precio": "150",
-        "id": 1
-    }
-]
